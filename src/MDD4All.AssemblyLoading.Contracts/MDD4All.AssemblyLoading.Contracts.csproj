@@ -4,4 +4,35 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <!-- The library is oalt's; the packaging around it is not. Author and copyright stay
+       with him, which is what the name on a package is for. -->
+  <PropertyGroup>
+    <Version>2.0.0.0</Version>
+    <Authors>Dr. Oliver Alt</Authors>
+    <Company>MDD4All.de</Company>
+    <Copyright>(c) MDD4All.de</Copyright>
+    <Description>One interface: hand it a path, get an assembly back. Separated from any way of actually loading one, so a program can ask for an assembly without knowing - or caring - how it is fetched.</Description>
+    <PackageTags>AssemblyLoading Contracts Reflection Abstractions</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>Nuget.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Nuget.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
 </Project>
